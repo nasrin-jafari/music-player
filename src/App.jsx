@@ -1,6 +1,6 @@
 import "./styles/app.scss";
-import Player from './components/Player';
-import Song from './components/Song';
+import Player from "./components/Player";
+import Song from "./components/Song";
 import musicData from "./data";
 import { useState } from "react";
 import SongList from "./components/SongList";
