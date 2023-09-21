@@ -48,7 +48,6 @@ const Player = ({
     const roundDuration = Math.round(duration);
     const animationPercentage = Math.round((roundCurent / roundDuration) * 100);
     // console.log(animationPercentage);
-    // setSongInfo({ ...songInfo, currentTime: currentTime, duration: duration });
     if (currentTime === duration) {
       const curentIndex = songs.findIndex((item) => item.id === curentsongs.id);
       if (curentIndex === songs.length - 1) {
@@ -56,7 +55,7 @@ const Player = ({
       } else {
         setCurentSongs(songs[curentIndex + 1]);
       }
-      playSong()
+      playSong();
     }
 
     setSongInfo({
