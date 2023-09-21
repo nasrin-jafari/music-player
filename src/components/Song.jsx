@@ -1,5 +1,4 @@
-import React from 'react'
-
+import React from "react";
 const Song = ({ curentsongs }) => {
   return (
     <div className="song-container  ">
@@ -10,4 +9,4 @@ const Song = ({ curentsongs }) => {
   );
 };
 
-export default Song
+export default Song;
