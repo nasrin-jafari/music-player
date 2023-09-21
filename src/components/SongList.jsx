@@ -1,6 +1,5 @@
 import React from "react";
 import SongListItem from "./SongListItem";
-
 const SongList = ({ songs, setCurentSongs, setSongs, displayListSong }) => {
   return (
     <div className={`song-list ${displayListSong ? "" : "displayList"}`}>
@@ -19,5 +18,4 @@ const SongList = ({ songs, setCurentSongs, setSongs, displayListSong }) => {
     </div>
   );
 };
-
 export default SongList;
