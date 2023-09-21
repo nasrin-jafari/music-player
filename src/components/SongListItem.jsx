@@ -17,7 +17,7 @@ const SongListItem = ({ song, setCurentSongs, songs, setSongs }) => {
         };
       }
     });
-    setSongs(newSongs)
+    setSongs(newSongs);
   };
   return (
     // <div onClick={() => setCurentSongs(song)} className="song-item">
