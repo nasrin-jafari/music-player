@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.App {
+  transition: all 1s ease;
+}
+.activeList {
+  margin-left: 10%;
+}
+@import "./player";
+@import "./song";
+@import "./songList";
+@import "./toggleList";

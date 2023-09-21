@@ -1,0 +1,51 @@
+.App-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+nav {
+  min-height: 10vh;
+  width: 50%;
+  display: flex;
+  margin-bottom: 20px;
+  justify-content: space-between;
+  align-items: center;
+  button {
+    background: transparent;
+    border: 2px solid rgb(65, 65, 65);
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: all 0.3s ease;
+    &:hover {
+      background: rgb(65, 65, 65);
+      color: white;
+      border: 2px solid rgb(153, 153, 153);
+    }
+  }
+}
+#btn-toggle {
+  font-family: "Lato", sans-serif;
+  font-weight: bold;
+  margin-right: 8px;
+}
+#app-title {
+  font-family: "Lato", sans-serif;
+  font-weight: bold;
+  color: rgb(54, 54, 54);
+}
+@media screen and (max-width: 768px) {
+  nav {
+    button {
+      z-index: 10;
+      position: fixed;
+      right: 3vw;
+      top: 3vw;
+    }
+  }
+  #app-title {
+    z-index: 10;
+    position: fixed;
+    left: 3vw;
+    top: 3vw;
+  }
+}
