@@ -1,6 +1,12 @@
 import React from "react";
 
-const SongListItem = ({ song, setCurentSongs, songs, setSongs }) => {
+const SongListItem = ({
+  song,
+  setCurentSongs,
+  songs,
+  setSongs,
+  setIsPlaying,
+}) => {
   const songSelected = () => {
     const selectedSong = songs.filter((item) => item.id === song.id);
     setCurentSongs(selectedSong[0]);
@@ -18,6 +24,7 @@ const SongListItem = ({ song, setCurentSongs, songs, setSongs }) => {
       }
     });
     setSongs(newSongs);
+    setIsPlaying(true);
   };
   return (
     // <div onClick={() => setCurentSongs(song)} className="song-item">

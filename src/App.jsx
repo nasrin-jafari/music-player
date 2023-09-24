@@ -30,6 +30,7 @@ function App() {
         setCurentSongs={setCurentSongs}
         setSongs={setSongs}
         displayListSong={displayListSong}
+        setIsPlaying={setIsPlaying}
       />
     </div>
   );

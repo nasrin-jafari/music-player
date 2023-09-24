@@ -36,6 +36,9 @@ const Player = ({
       }
     });
     setSongs(newSongs);
+    if (isPlaying) {
+      audioRef.current.play();
+    }
   }, [curentsongs]);
   const { currentTime, duration, animationPercentage } = songInfo;
 
@@ -56,6 +59,7 @@ const Player = ({
         setCurentSongs(songs[curentIndex + 1]);
       }
       playSong();
+      autoPlay();
     }
 
     setSongInfo({
@@ -85,6 +89,13 @@ const Player = ({
 
     setSongInfo({ ...songInfo, currentTime: e.target.value });
   };
+  const autoPlay = () => {
+    setIsPlaying(!isPlaying);
+    setTimeout(() => {
+      setIsPlaying(true);
+      audioRef.current.play();
+    }, 100);
+  };
   const skipSong = (dir) => {
     const curentIndex = songs.findIndex((item) => item.id === curentsongs.id);
 
@@ -102,6 +113,7 @@ const Player = ({
         setCurentSongs(songs[curentIndex - 1]);
       }
     }
+    autoPlay();
   };
   const trackAnimation = {
     transform: `translateX(${animationPercentage}%)`,
